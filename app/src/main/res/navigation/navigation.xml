@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentInici">
+
+    <fragment
+        android:id="@+id/fragmentInici"
+        android:name="com.enaitzdam.provafragments.FragmentInici"
+        android:label="fragment_inici"
+        tools:layout="@layout/fragment_inici" >
+        <action
+            android:id="@+id/action_fragmentInici_to_fragmentFinal"
+            app:destination="@id/fragmentFinal" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFinal"
+        android:name="com.enaitzdam.provafragments.FragmentFinal"
+        android:label="fragment_final"
+        tools:layout="@layout/fragment_final" />
+</navigation>
