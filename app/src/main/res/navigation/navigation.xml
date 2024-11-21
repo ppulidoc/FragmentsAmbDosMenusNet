@@ -19,4 +19,9 @@
         android:name="com.enaitzdam.provafragments.FragmentFinal"
         android:label="fragment_final"
         tools:layout="@layout/fragment_final" />
+    <fragment
+        android:id="@+id/boatFragment"
+        android:name="com.enaitzdam.provafragments.BoatFragment"
+        android:label="fragment_boat"
+        tools:layout="@layout/fragment_boat" />
 </navigation>

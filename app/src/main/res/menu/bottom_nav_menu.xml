@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragmentInici"
+        android:icon="@drawable/baseline_airport_shuttle_24"
+        android:title="Car" />
+    <item
+        android:id="@+id/fragmentFinal"
+        android:icon="@drawable/baseline_airplanemode_active_24"
+        android:title="Plane" />
+    <item
+        android:id="@+id/boatFragment"
+        android:icon="@drawable/baseline_anchor_24"
+        android:title="Boat" />
+</menu>
