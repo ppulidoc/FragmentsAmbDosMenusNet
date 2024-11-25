@@ -18,7 +18,12 @@
         android:id="@+id/fragmentFinal"
         android:name="com.enaitzdam.provafragments.FragmentFinal"
         android:label="fragment_final"
-        tools:layout="@layout/fragment_final" />
+        tools:layout="@layout/fragment_final" >
+        <action
+            android:id="@+id/action_fragmentFinal_to_boatFragment"
+            app:destination="@id/boatFragment"
+            app:popUpTo="@id/fragmentInici" />
+    </fragment>
     <fragment
         android:id="@+id/boatFragment"
         android:name="com.enaitzdam.provafragments.BoatFragment"
