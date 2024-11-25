@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        //BOTTOM NAVIGATION
+        //BOTTOM NAVIGATION --
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHostFragment.navController
@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         //NAVIGATION DRAWER AMB ACTIONBAR
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         toolbar=findViewById(R.id.toolbar)
+
 
 
         //The given Activity will be linked to the specified DrawerLayout and
