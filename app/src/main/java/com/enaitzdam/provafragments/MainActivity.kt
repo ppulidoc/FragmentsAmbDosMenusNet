@@ -56,11 +56,6 @@ class MainActivity : AppCompatActivity() {
         toolbar=findViewById(R.id.toolbar)
 
 
-
-        //The given Activity will be linked to the specified DrawerLayout and
-        // its Actionbar's Up button will be set to a custom drawable.
-        //This drawable shows a Hamburger icon when drawer is closed and an arrow when drawer is open.
-        // It animates between these two states as the drawer opens.
         val toggle = ActionBarDrawerToggle(
             this, drawerLayout, R.string.nav_open, R.string.nav_close
         )
@@ -78,7 +73,30 @@ class MainActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(this, navController, appBarConfig)
 
+        // Añadir un listener para los ítems del NavigationView
+        navView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.fragmentFinal -> {
+                    navController.navigate(R.id.fragmentFinal)
+                }
+                R.id.fragmentInici -> {
+                    navController.navigate(R.id.fragmentInici)
+                }
+                R.id.boatFragment -> {
+                    navController.navigate(R.id.boatFragment)
+                }
+                R.id.logout -> {
+                    // Cerrar la aplicación cuando se pulse el item "Salir"
+                    finish() // Cierra la actividad y termina la aplicación
+                }
+                else -> false
+            }
+            drawerLayout.closeDrawer(GravityCompat.START) // Cierra el drawer al seleccionar un item
+            true
+        }
     }
+
+
 
     override fun onSupportNavigateUp(): Boolean {
         // replace navigation up button with nav drawer button when on start destination
